@@ -5,88 +5,85 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/css/styles.css"/> 
     <title>W.U.F.R</title>
 </head>
 
 
-<body class="">
+<body >
 
-    <div class="hero">
-        <div class="hero-head">
-                <div class="container">
-                    <p class="title is-1 ">Weave User Field Reference</p>
-                </div>
+        <div class="container">
+            <div class="row">
+                <h1 class="col s12">Weave User Field Reference</h1>
+                <blockquote>
+                <p class="col s3">Currently in a dungeon and need some quick info? We're happy to help</p>
+                <p class="col s3">Fill out this form to see the knowledge you forgot!</p>
+                </blockquote>
+            </div>
         </div>
-        <div class="hero-body">
-            <p class="subtitle is-3 ">Currently in a dungeon and need some quick info? We're happy to help</p>
-            <p class="subtitle">Fill out this form to see the knowledge you forgot!</p>
         
 
-    
-  
-    <div class="columns">
-        <div class="dropdown is-active">
-            <div class="dropdown-trigger">
-                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">Select Class
-                    <span class="icon is-small">
-                        <i class="fas fa-angle-down"></i>
-                    </span>
-                </button>
-            </div>
         
-            <div class="dropdown-menu">
-                <div class="dropdown-content">
-                    <a href="" class="dropdown-item">Druid</a>
-                    <a href="" class="dropdown-item">Bard</a>
-                    <a href="" class="dropdown-item">Paladin</a>
-                    <a href="" class="dropdown-item">Ranger</a>
-                    <a href="" class="dropdown-item">Sorcerer</a>
-                    <a href="" class="dropdown-item">Wizard</a>
+            <div class="divider"></div>
+            <div class="container">
+            <div class="row">
+                <input type="text" class="col s12" id="pName" placeholder="Name?">
+                </input> 
+                
+                <div class="col s6">
+                   
+                   <a href="#" data-target="dropdown1" class="dropdown-trigger btn">Select Class</a>
+                                            
+                    <ul class="dropdown-content" id="dropdown1">
+                        <li href="" class="">Druid</li>
+                        <li href="" class="">Bard</li>
+                        <li href="" class="">Paladin</li>
+                        <li href="" class="">Ranger</li>
+                        <li href="" class="">Sorcerer</li>
+                        <li href="" class="">Wizard</>
+                    </ul>
+
                 </div>
-            </div>
-        </div>
-    
-        <div class="dropdown is-active">
-            <div class="dropdown-trigger">
-                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">Select Level
-                    <span class="icon is-small">
-                        <i class="fas fa-angle-down"></i>
-                    </span>
-                </button>
-            </div>
-            <div class="dropdown-menu">
-                <div class="dropdown-content is-hoverable">
-                    <a href="" class="dropdown-item">1</a>
-                    <a href="" class="dropdown-item">2</a>
-                    <a href="" class="dropdown-item">3</a>
-                    <a href="" class="dropdown-item">4</a>
-                    <a href="" class="dropdown-item">5</a>
-                    <a href="" class="dropdown-item">6</a>
-                    <a href="" class="dropdown-item">7</a>
-                    <a href="" class="dropdown-item">8</a>
-                    <a href="" class="dropdown-item">9</a>
-                    <a href="" class="dropdown-item">10</a>
-                    <a href="" class="dropdown-item">11</a>
-                    <a href="" class="dropdown-item">12</a>
-                    <a href="" class="dropdown-item">13</a>
-                    <a href="" class="dropdown-item">14</a>
-                    <a href="" class="dropdown-item">15</a>
-                    <a href="" class="dropdown-item">16</a>
-                    <a href="" class="dropdown-item">17</a>
-                    <a href="" class="dropdown-item">18</a>
-                    <a href="" class="dropdown-item">19</a>
-                    <a href="" class="dropdown-item">20</a>
+            
+                <div class="col s6">
+                    
+                    <a href="#" data-target="dropdown2" class="dropdown-trigger btn">Select Level</a>
+
+                    <ul class="dropdown-content" id="dropdown2">
+                        <li class="">1</li>
+                        <li class="">2</li>
+                        <li class="">3</li>
+                        <li class="">4</li>
+                        <li class="">5</li>
+                        <li class="">6</li>
+                        <li class="">7</li>
+                        <li class="">8</li>
+                        <li class="">9</li>
+                        <li class="">10</li>
+                        <li class="">11</li>
+                        <li class="">12</li>
+                        <li class="">13</li>
+                        <li class="">14</li>
+                        <li class="">15</li>
+                        <li class="">16</li>
+                        <li class="">17</li>
+                        <li class="">18</li>
+                        <li class="">19</li>
+                        <li class="">20</li>
+                    </ul>
+                       
                 </div>
+
+                </div>
+
             </div>
-        </div>
-    </div>
-</div>
+          
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
 <script type="text/javascript" src="./assets/js/script.js"/>
 </body>
 </html>

@@ -1,8 +1,6 @@
-var dropdown = document.querySelector(".dropdown");
 
-    dropdown.addEventListener("click", function(event) {
-        event.stopPropagation();
-        dropdown.classList.toggle("is-active");
-    }); 
-
-
+$(document).ready(function(){
+    $('.dropdown-trigger').dropdown({
+        coverTrigger: false
+    });
+});
