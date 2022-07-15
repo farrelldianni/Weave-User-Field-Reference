@@ -1,3 +1,13 @@
+:root {
+    font-family: 'Cormorant SC';
+    
+    background-color: black;
+    color: white;
+}
+h1{
+    font-family: 'Bungee Hairline';
+}
 .dropdown-trigger {
     text-align: center;
+    font-family: 'Press Start 2P';
 }
