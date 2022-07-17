@@ -1,4 +1,4 @@
-
+var pmAPI = ("https://app.pixelencounter.com/api/basic/monsters/random/png?size=100")
 $(document).ready(function(){
     $('.dropdown-trigger').dropdown({
         coverTrigger: false
@@ -14,4 +14,11 @@ $(document).ready (function() {
 })
 
 // This array holds all of our Grumpy Cat facts!
-var splashTextArray = ["Grumpy was born on April 4, 2012", "Grumpy's unique look comes from feline dwarfism and an underbite", "Grumpy has a brother named Pokey", "Her favorite Friskies food is Savory Shreds"]
+var splashTextArray = ["Trying to avoid a Tarrasque TPK? Let's see what options you have.", "You finally want to try something OTHER than fireball? Glad to see the growth.", "Don't forget that some spellcasters have access to ALL there spells, just make sure to prepare them after a long rest!", "Scared of Straud? we have a spell for that. "]
+
+
+
+$(document).ready (function() {
+fetch(pmAPI)
+ .then(response => response.json())
+ .then(data => display(data));})
