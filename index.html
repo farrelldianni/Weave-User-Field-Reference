@@ -34,54 +34,59 @@
             <input type="text" class="col s12" id="pName" placeholder="Name?">
             </input> 
             
-            <div class="col s4">
-                
-                <!-- button for class dropdown -->
-                <a href="#" data-target="dropdown1" class="dropdown-trigger btn">Class?</a>
-                                        
-                <ul class="dropdown-content" id="dropdown1">
-                    <li href="" class="">Druid</li>
-                    <li href="" class="">Bard</li>
-                    <li href="" class="">Paladin</li>
-                    <li href="" class="">Ranger</li>
-                    <li href="" class="">Sorcerer</li>
-                    <li href="" class="">Wizard</>
-                </ul>
+                <!-- button for class dropdown --> 
+            <div class="input-field col s4">
+    
+                <select class="dropdown-content" id="classSelect">
+                    <option disabled selected >Choose your Class</option>
+                    <option value = "druid" id = "druid">Druid</option>
+                    <option value = "bard" id = "bard">Bard</option>
+                    <option value = "paladin" id = "paladin">Paladin</option>
+                    <option value = "ranger" id = "ranger">Ranger</option>
+                    <option value = "sorcerer" id = "sorcerer">Sorcerer</option>
+                    <option value = "warlock" id = "warlock">Warlock</option>
+                </select>
+                <label>Class Select</label>
 
             </div>
 
-            <div class="col s4">
+            <div class="input-field col s4">
                 
                 <!-- button for level dropdown -->
-                <a href="#" data-target="dropdown2" class="dropdown-trigger btn">Level?</a>
 
-                <ul class="dropdown-content" id="dropdown2">
-                    <li class="">1</li>
-                    <li class="">2</li>
-                    <li class="">3</li>
-                    <li class="">4</li>
-                    <li class="">5</li>
-                    <li class="">6</li>
-                    <li class="">7</li>
-                    <li class="">8</li>
-                    <li class="">9</li>
-                    <li class="">10</li>
-                    <li class="">11</li>
-                    <li class="">12</li>
-                    <li class="">13</li>
-                    <li class="">14</li>
-                    <li class="">15</li>
-                    <li class="">16</li>
-                    <li class="">17</li>
-                    <li class="">18</li>
-                    <li class="">19</li>
-                    <li class="">20</li>
-                </ul>
+                <select class="dropdown-content" id="levelSelect">
+                    
+                    <option disabled selected>Chose your level</option>
+                    <option class="">3</option>
+                    <option class="">4</option>
+                    <option class="">5</option>
+                    <option class="">6</option>
+                    <option class="">7</option>
+                    <option class="">8</option>
+                    <option class="">9</option>
+                    <option class="">10 </option>
+                    <option class="">11 </option>
+                    <option class="">12 </option>
+                    <option class="">13 </option>
+                    <option class="">14 </option>
+                    <option class="">15 </option>
+                    <option class="">16 </option>
+                    <option class="">17 </option>
+                    <option class="">18 </option>
+                    <option class="">19 </option>
+                    <option class="">20 </option>
+                </select>
+
+                <label>Level Select</label>
                     
             </div>
 
-            <div class="col s4 ">
-                <a href="" class="dropdown-trigger btn">Sub Class?</a>
+            <!-- Subclass Select -->
+            <div class=" input-field col s4 ">
+            <select id="subclassSelect">
+               <option disabled>Choose your Subclass</option>
+            </select>
+            <label>Subclass Select</label>
             </div>
 
         </div>
