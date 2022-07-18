@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
     background: #424242;
     color: #fff;
@@ -9,5 +10,20 @@
 
 h1 {
     font-family: 'Bungee Hairline';
+}
     
+=======
+:root {
+    font-family: 'Cormorant SC';
+    
+    background-color: black;
+    color: white;
+}
+h1{
+    font-family: 'Bungee Hairline';
+}
+.dropdown-trigger {
+    text-align: center;
+    font-family: 'Press Start 2P';
+>>>>>>> ca0dd6a78a18091a03da0060dde9e3469cfa054c
 }
