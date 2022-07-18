@@ -1,3 +1,13 @@
+* {
+    background-color: white;
+    font-family: 'Press Start 2P';
+    color: black;
+}
+
 .dropdown-trigger {
     text-align: center;
+}
+
+h1 {
+    font-family: 'Bungee Hairline'
 }
