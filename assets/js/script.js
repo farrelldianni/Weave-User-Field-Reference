@@ -1,7 +1,5 @@
 // const apiUrl = "https://www.dnd5eapi.co/api/"
 
-var waifuAPI = ("https://api.waifu.pics/sfw/shinobu")
-
 $(document).ready(function(){
     $('.dropdown-trigger').dropdown({
         coverTrigger: false
@@ -66,44 +64,6 @@ var logSelectedLevel = function() {
 levelSelect.addEventListener('change', logSelectedLevel);
 logSelectedLevel();
 
-
-
-
-
-
-// const p = document.getElementById("waifu")
-// fetch("https://api.waifu.pics/sfw/shinobu")
-//     .then((response) => {
-//         return response.json();
-//     })
-//     .then((data) => {
-//         console.log(data)
-//     });
-
-function randomPic() {
-    $("#waifu").attr("src", "waifu()")
-    // console.log("hi")
-};
-
-$(document).ready(randomPic());
-
-// fetch("https://api.waifu.pics/sfw/shinobu")
-//     .then(response => response.json())
-//     .then((data) => console.log(data));
-
-var waifu = function() {
-    fetch("https://api.waifu.pics/sfw/kill")
-    .then(response => response.json())
-    .then(data => console.log(data.url));
-
-    return
-}
-console.log(waifu());
-
-waifu();
-
-let select = document.getElementById('subclassSelect');
-
 // Storing past levels and class in localStorage
 const selectedClass = document.getElementById('classSelect');
 selectedClass.addEventListener("change", (event) => {
@@ -122,13 +82,6 @@ playerName.addEventListener('change', (event) => {
     let currentArea = event.target.value;
     localStorage.setItem("playerName", currentArea);
 })
-
-
-//REFILLING DROPDOWNS WITH PREVIOUS INPUTS
-written for push
-
-
-
 
 // apiQuery();
 
@@ -152,14 +105,9 @@ var splashTextArray = [
     "You want to use a 9th level slot on Hellish Rebuke? You sure?",
     "I'm sure that hooded figure you met in the tavern is a lovely person and definitely not some sort of evil lich! Go befriend them!",
     "Whats the difference between a wizard and a sorcerer? Class.",
-    "Yo momma so dumb she starved and Illithid"
+    "Yo momma so dumb she starved an Illithid"
 ]
 
-
-$(document).ready (function() {
-fetch(pmAPI)
- .then(response => response.json())
- .then(data => display(data));})
 
 // $(document).ready (function() {
 // fetch(pmAPI)
