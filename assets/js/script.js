@@ -1,4 +1,6 @@
-var pmAPI = ("https://app.pixelencounter.com/api/basic/monsters/random/png?size=100")
+var apiURL = 'https://app.pixelencounter.com/api/basic/monsters/random/png?size=100'
+
+
 $(document).ready(function(){
     $('.dropdown-trigger').dropdown({
         coverTrigger: false
@@ -13,12 +15,14 @@ $(document).ready (function() {
 	$("#splash-text").text(splashTextArray[number])
 })
 
-// This array holds all of our Grumpy Cat facts!
+// This array holds all of our splash text options!
 var splashTextArray = ["Trying to avoid a Tarrasque TPK? Let's see what options you have.", "You finally want to try something OTHER than fireball? Glad to see the growth.", "Don't forget that some spellcasters have access to ALL there spells, just make sure to prepare them after a long rest!", "Scared of Straud? we have a spell for that. "]
 
 
-
-$(document).ready (function() {
-fetch(pmAPI)
- .then(response => response.json())
- .then(data => display(data));})
+fetch(apiURL)
+.then(data => {
+return data.json();
+})
+.then(post => {
+console.log(post.title);
+});
