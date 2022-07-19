@@ -1,29 +1,21 @@
-<<<<<<< HEAD
-* {
-    background: #424242;
-    color: #fff;
-    
-}
-.dropdown-trigger {
-    text-align: center;
-}
-
-h1 {
-    font-family: 'Bungee Hairline';
-}
-    
-=======
 :root {
     font-family: 'Cormorant SC';
-    
-    background-color: black;
+    background-color: #263238;
     color: white;
 }
 h1{
     font-family: 'Bungee Hairline';
+    border-bottom: 1px solid white;
+    text-align: center;
 }
 .dropdown-trigger {
     text-align: center;
+    color: white;
     font-family: 'Press Start 2P';
->>>>>>> ca0dd6a78a18091a03da0060dde9e3469cfa054c
+    font-size: 12px;
+}
+
+.btn-large {
+    background-color: #b71c1c;
+    color: black;
 }
