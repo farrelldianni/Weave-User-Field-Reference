@@ -7,7 +7,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://pagecdn.io/lib/easyfonts/fonts.css"/>
+    
+    <link rel="stylesheet" href="https://pagecdn.io/lib/easyfonts/fonts.css" rel="stylesheet"/>
     <link rel="stylesheet" href="./assets/css/styles.css"/> 
     <title>W.U.F.R</title>
 </head>
@@ -19,12 +20,11 @@
         <div class="row">
             <h1 class="col s12">Weave User Field Reference</h1>
             <blockquote>
-            <p class="col s3">Currently in a dungeon and need some quick info? We're happy to help</p>
+            <p class="col s3" id="splash-text"></p>
             <p class="col s3">Fill out this form to see the knowledge you forgot!</p>
             </blockquote>
         </div>
     </div>
-
 
 
     <div class="divider"></div>
@@ -35,54 +35,59 @@
             <input type="text" class="col s12" id="pName" placeholder="Name?">
             </input> 
             
-            <div class="col s4">
-                
-                <!-- button for class dropdown -->
-                <a href="#" data-target="dropdown1" class="dropdown-trigger btn">Class?</a>
-                                        
-                <ul class="dropdown-content" id="dropdown1">
-                    <li href="" class="">Druid</li>
-                    <li href="" class="">Bard</li>
-                    <li href="" class="">Paladin</li>
-                    <li href="" class="">Ranger</li>
-                    <li href="" class="">Sorcerer</li>
-                    <li href="" class="">Wizard</>
-                </ul>
+                <!-- button for class dropdown --> 
+            <div class="input-field col s4">
+    
+                <select class="dropdown-content" id="classSelect">
+                    <option disabled selected >Choose your Class</option>
+                    <option value = "druid" id = "druid">Druid</option>
+                    <option value = "bard" id = "bard">Bard</option>
+                    <option value = "paladin" id = "paladin">Paladin</option>
+                    <option value = "ranger" id = "ranger">Ranger</option>
+                    <option value = "sorcerer" id = "sorcerer">Sorcerer</option>
+                    <option value = "warlock" id = "warlock">Warlock</option>
+                </select>
+                <label>Class Select</label>
 
             </div>
 
-            <div class="col s4">
+            <div class="input-field col s4">
                 
                 <!-- button for level dropdown -->
-                <a href="#" data-target="dropdown2" class="dropdown-trigger btn">Level?</a>
 
-                <ul class="dropdown-content" id="dropdown2">
-                    <li class="">1</li>
-                    <li class="">2</li>
-                    <li class="">3</li>
-                    <li class="">4</li>
-                    <li class="">5</li>
-                    <li class="">6</li>
-                    <li class="">7</li>
-                    <li class="">8</li>
-                    <li class="">9</li>
-                    <li class="">10</li>
-                    <li class="">11</li>
-                    <li class="">12</li>
-                    <li class="">13</li>
-                    <li class="">14</li>
-                    <li class="">15</li>
-                    <li class="">16</li>
-                    <li class="">17</li>
-                    <li class="">18</li>
-                    <li class="">19</li>
-                    <li class="">20</li>
-                </ul>
+                <select class="dropdown-content" id="levelSelect">
+                    
+                    <option disabled selected>Chose your level</option>
+                    <option class="">3</option>
+                    <option class="">4</option>
+                    <option class="">5</option>
+                    <option class="">6</option>
+                    <option class="">7</option>
+                    <option class="">8</option>
+                    <option class="">9</option>
+                    <option class="">10 </option>
+                    <option class="">11 </option>
+                    <option class="">12 </option>
+                    <option class="">13 </option>
+                    <option class="">14 </option>
+                    <option class="">15 </option>
+                    <option class="">16 </option>
+                    <option class="">17 </option>
+                    <option class="">18 </option>
+                    <option class="">19 </option>
+                    <option class="">20 </option>
+                </select>
+
+                <label>Level Select</label>
                     
             </div>
 
-            <div class="col s4 ">
-                <a href="" class="dropdown-trigger btn">Sub Class?</a>
+            <!-- Subclass Select -->
+            <div class=" input-field col s4 ">
+            <select id="subclassSelect">
+               <option disabled>Choose your Subclass</option>
+            </select>
+            <label>Subclass Select</label>
             </div>
 
             <div class="col s4" id="image"></div>
@@ -90,6 +95,9 @@
 
         </div>
 
+    </div>
+    <div class="container" id="waifu">
+        <h3>hello</h3>
     </div>
 
 
