@@ -1,4 +1,56 @@
-.hero-img {
-    
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+* {
+    background-color: white;
+    font-family: 'Press Start 2P';
+    color: black;
+}
 
+=======
+<<<<<<< HEAD
+* {
+    background: #424242;
+    color: #fff;
+    
+}
+>>>>>>> mvp
+.dropdown-trigger {
+    text-align: center;
+}
+
+h1 {
+<<<<<<< HEAD
+    font-family: 'Bungee Hairline'
+=======
+    font-family: 'Bungee Hairline';
+}
+    
+=======
+>>>>>>> local
+:root {
+    font-family: 'Cormorant SC';
+    background-color: #263238;
+    color: white;
+}
+h1{
+    font-family: 'Bungee Hairline';
+    border-bottom: 1px solid white;
+    text-align: center;
+}
+.dropdown-trigger {
+    text-align: center;
+    color: white;
+    font-family: 'Press Start 2P';
+<<<<<<< HEAD
+    font-size: 12px;
+}
+
+.btn-large {
+    background-color: #b71c1c;
+    color: black;
+=======
+>>>>>>> ca0dd6a78a18091a03da0060dde9e3469cfa054c
+>>>>>>> mvp
+>>>>>>> local
 }

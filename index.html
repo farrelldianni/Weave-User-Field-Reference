@@ -5,88 +5,112 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="https://pagecdn.io/lib/easyfonts/fonts.css" rel="stylesheet"/>
     <link rel="stylesheet" href="./assets/css/styles.css"/> 
     <title>W.U.F.R</title>
 </head>
 
 
-<body class="">
+<body >
 
-    <div class="hero">
-        <div class="hero-head">
-                <div class="container">
-                    <p class="title is-1 ">Weave User Field Reference</p>
-                </div>
-        </div>
-        <div class="hero-body">
-            <p class="subtitle is-3 ">Currently in a dungeon and need some quick info? We're happy to help</p>
-            <p class="subtitle">Fill out this form to see the knowledge you forgot!</p>
-        
-
-    
-  
-    <div class="columns">
-        <div class="dropdown is-active">
-            <div class="dropdown-trigger">
-                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">Select Class
-                    <span class="icon is-small">
-                        <i class="fas fa-angle-down"></i>
-                    </span>
-                </button>
-            </div>
-        
-            <div class="dropdown-menu">
-                <div class="dropdown-content">
-                    <a href="" class="dropdown-item">Druid</a>
-                    <a href="" class="dropdown-item">Bard</a>
-                    <a href="" class="dropdown-item">Paladin</a>
-                    <a href="" class="dropdown-item">Ranger</a>
-                    <a href="" class="dropdown-item">Sorcerer</a>
-                    <a href="" class="dropdown-item">Wizard</a>
-                </div>
-            </div>
-        </div>
-    
-        <div class="dropdown is-active">
-            <div class="dropdown-trigger">
-                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">Select Level
-                    <span class="icon is-small">
-                        <i class="fas fa-angle-down"></i>
-                    </span>
-                </button>
-            </div>
-            <div class="dropdown-menu">
-                <div class="dropdown-content is-hoverable">
-                    <a href="" class="dropdown-item">1</a>
-                    <a href="" class="dropdown-item">2</a>
-                    <a href="" class="dropdown-item">3</a>
-                    <a href="" class="dropdown-item">4</a>
-                    <a href="" class="dropdown-item">5</a>
-                    <a href="" class="dropdown-item">6</a>
-                    <a href="" class="dropdown-item">7</a>
-                    <a href="" class="dropdown-item">8</a>
-                    <a href="" class="dropdown-item">9</a>
-                    <a href="" class="dropdown-item">10</a>
-                    <a href="" class="dropdown-item">11</a>
-                    <a href="" class="dropdown-item">12</a>
-                    <a href="" class="dropdown-item">13</a>
-                    <a href="" class="dropdown-item">14</a>
-                    <a href="" class="dropdown-item">15</a>
-                    <a href="" class="dropdown-item">16</a>
-                    <a href="" class="dropdown-item">17</a>
-                    <a href="" class="dropdown-item">18</a>
-                    <a href="" class="dropdown-item">19</a>
-                    <a href="" class="dropdown-item">20</a>
-                </div>
-            </div>
+    <div class="container">
+        <div class="row">
+            <h1 class="col s12">Weave User Field Reference</h1>
+            
+            <p class="col s6" id="splash-text"></p>
+            <p class="col s6">Fill out this form to see the knowledge you forgot!</p>
+           
         </div>
     </div>
-</div>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>   
-<script type="text/javascript" src="./assets/js/script.js"/>
+    <div class="divider"></div>
+
+    <!-- Form for player info -->
+    <div class="container">
+        <div class="row">
+            <input type="text" class="col s12" id="pName" placeholder="Name?">
+            </input> 
+            
+                <!-- button for class dropdown --> 
+            <div class="input-field col s4">
+    
+                <select class="dropdown-content" id="classSelect">
+                    <option disabled selected>Choose your Class</option>
+                    <option value = "druid" id = "druid">Druid</option>
+                    <option value = "bard" id = "bard">Bard</option>
+                    <option value = "paladin" id = "paladin">Paladin</option>
+                    <option value = "ranger" id = "ranger">Ranger</option>
+                    <option value = "sorcerer" id = "sorcerer">Sorcerer</option>
+                    <option value = "warlock" id = "warlock">Warlock</option>
+                </select>
+                <label>Class Select</label>
+
+            </div>
+
+            <div class="input-field col s4">
+                
+                <!-- button for level dropdown -->
+
+                <select class="dropdown-content" id="levelSelect">
+                    
+                    <option disabled selected>Chose your level</option>
+                    <option class="" value = "3">3</option>
+                    <option class="" value = "4">4</option>
+                    <option class="" value = "5">5</option>
+                    <option class="" value = "6">6</option>
+                    <option class="" value = "7">7</option>
+                    <option class="" value = "8">8</option>
+                    <option class="" value = "9">9</option>
+                    <option class="" value = "10">10 </option>
+                    <option class="" value = "11">11 </option>
+                    <option class="" value = "12">12 </option>
+                    <option class="" value = "13">13 </option>
+                    <option class="" value = "14">14 </option>
+                    <option class="" value = "15">15 </option>
+                    <option class="" value = "16">16 </option>
+                    <option class="" value = "17">17 </option>
+                    <option class="" value = "18">18 </option>
+                    <option class="" value = "19">19 </option>
+                    <option class="" value = "20">20 </option>
+                </select>
+
+                <label>Level Select</label>
+                    
+            </div>
+
+            <!-- Subclass Select -->
+            <div class=" input-field col s4 ">
+            <select id="subclassSelect">
+               <option disabled>Choose your Subclass</option>
+            </select>
+            <label>Subclass Select</label>
+            </div>
+
+            <div class="col s4" id="image"></div>
+            
+
+        </div>
+
+        <div class="row">
+            <div class="col s12 center-align">
+            <a href="" id="goBtn" class="waves-effect waves-dark btn-large">PLS GOD HELP</a>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="container" id="waifu">
+        <h3>hello</h3>
+    </div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
+<script type="text/javascript" src="./assets/js/script.js"></script>
 </body>
 </html>
