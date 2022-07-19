@@ -1,11 +1,7 @@
 var pmAPI = ("https://app.pixelencounter.com/api/basic/monsters/random/png?size=100")
 
+var waifuAPI = ("https://api.waifu.pics/sfw/shinobu")
 
-const apiUrl = "https://www.dnd5eapi.co/api/"
-
-// var pmAPI = ("https://app.pixelencounter.com/api/basic/monsters/random/png?size=100")
-
-// DROWNDOWN CONTROL 
 $(document).ready(function(){
     $('.dropdown-trigger').dropdown({
         coverTrigger: false
@@ -34,8 +30,8 @@ var whichClass = function(){
 console.log(whichClass())
 
 
-// const p = document.getElementById("pixel")
-// fetch("https://app.pixelencounter.com/api/basic/monsters/random/png?size=100")
+// const p = document.getElementById("waifu")
+// fetch("https://api.waifu.pics/sfw/shinobu")
 //     .then((response) => {
 //         return response.json();
 //     })

@@ -1,13 +1,22 @@
+* {
+    background-color: white;
+    background: #424242;
+    font-family: 'Press Start 2P';
+    color: black;
+}
+    
 :root {
     font-family: 'Cormorant SC';
     background-color: #263238;
     color: white;
 }
+
 h1{
     font-family: 'Bungee Hairline';
     border-bottom: 1px solid white;
     text-align: center;
 }
+
 .dropdown-trigger {
     text-align: center;
     color: white;
