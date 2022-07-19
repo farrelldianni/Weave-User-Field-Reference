@@ -21,13 +21,7 @@ $(document).ready(function(){
 // }
 
 //GETTING SELECTION INFORMATION
-//
 
-//Try number 1 
-// whichClass = function(){
-//     var fuckingClass = $(this).children("#classSelect option:selected").text();
-//      return fuckingClass 
-//  }
 
 
 // SEARCHING API FOR SPELLS RELATED TO SELECTED CLASS 
@@ -44,6 +38,11 @@ $(document).ready(function(){
              }}
         )
      }
+
+
+
+
+
 
 
 // GRABBING SELECTED CLASS FROM classSelect
@@ -68,6 +67,11 @@ var logSelectedLevel = function() {
 levelSelect.addEventListener('change', logSelectedLevel);
 logSelectedLevel();
 
+
+
+
+
+
 // Storing past levels and class in localStorage
 const selectedClass = document.getElementById('classSelect');
 selectedClass.addEventListener("change", (event) => {
@@ -86,6 +90,13 @@ playerName.addEventListener('change', (event) => {
     let currentArea = event.target.value;
     localStorage.setItem("playerName", currentArea);
 })
+
+
+//REFILLING DROPDOWNS WITH PREVIOUS INPUTS
+written for push
+
+
+
 
 // apiQuery();
 
