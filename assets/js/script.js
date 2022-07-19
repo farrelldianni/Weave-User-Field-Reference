@@ -1,4 +1,4 @@
-const apiUrl = "https://www.dnd5eapi.co/api/"
+// const apiUrl = "https://www.dnd5eapi.co/api/"
 
 // var pmAPI = ("https://app.pixelencounter.com/api/basic/monsters/random/png?size=100")
 
@@ -14,22 +14,59 @@ $(document).ready(function(){
 });
 
 // API TESTING 
-var apiQuery = function(){
-    fetch(apiUrl)
-    .then(response => response.json())
-    .then(data => console.log(data));
-}
+// var apiQuery = function(){
+//     fetch("https://www.dnd5eapi.co/api/" + whichClass + "/")
+//     .then(response => response.json())
+//     .then(data => console.log(data));
+// }
 
 //GETTING SELECTION INFORMATION
+//
 
-var whichClass = function(){
-    var fuckingClass = $("#classSelect option:selected").text();
-    return fuckingClass 
-    
+//Try number 1 
+// whichClass = function(){
+//     var fuckingClass = $(this).children("#classSelect option:selected").text();
+//      return fuckingClass 
+//  }
+
+
+// SEARCHING API FOR SPELLS RELATED TO SELECTED CLASS 
+  var getSpells = function(userClass) {
+     var apiUrl = "https://www.dnd5eapi.co/api/classes/" + logSelectedClass + "/spells";
+
+     fetch(apiUrl)
+         .then(function(response) {
+            if (response.ok) {
+                console.log(response);
+                response.json().then(function(data) {
+                     console.log(data);
+                })
+             }}
+        )
+     }
+
+
+// GRABBING SELECTED CLASS FROM classSelect
+var classSelect = document.querySelector('#classSelect');
+
+var logSelectedClass = function() {
+    console.log(classSelect.options[classSelect.selectedIndex].id);
+    return logSelectedClass;
+};
+
+classSelect.addEventListener('change', logSelectedClass);
+logSelectedClass();
+
+// GRABBING SELECTED LVL FROM levelSelect
+var levelSelect = document.querySelector("#levelSelect");
+
+var logSelectedLevel = function() {
+    console.log(levelSelect.options[levelSelect.selectedIndex].id);
+    return logSelectedLevel
 }
 
-console.log(whichClass())
-
+levelSelect.addEventListener('change', logSelectedLevel);
+logSelectedLevel();
 
 // Storing past levels and class in localStorage
 const selectedClass = document.getElementById('classSelect');
@@ -50,7 +87,7 @@ playerName.addEventListener('change', (event) => {
     localStorage.setItem("playerName", currentArea);
 })
 
-apiQuery();
+// apiQuery();
 
 
 // When the page is loaded...
