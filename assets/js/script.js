@@ -1,3 +1,6 @@
+var pmAPI = ("https://app.pixelencounter.com/api/basic/monsters/random/png?size=100")
+
+
 const apiUrl = "https://www.dnd5eapi.co/api/"
 
 // var pmAPI = ("https://app.pixelencounter.com/api/basic/monsters/random/png?size=100")
@@ -30,6 +33,39 @@ var whichClass = function(){
 
 console.log(whichClass())
 
+
+// const p = document.getElementById("pixel")
+// fetch("https://app.pixelencounter.com/api/basic/monsters/random/png?size=100")
+//     .then((response) => {
+//         return response.json();
+//     })
+//     .then((data) => {
+//         console.log(data)
+//     });
+
+function randomPic() {
+    $("#waifu").attr("src", "waifu()")
+    // console.log("hi")
+};
+
+$(document).ready(randomPic());
+
+// fetch("https://api.waifu.pics/sfw/shinobu")
+//     .then(response => response.json())
+//     .then((data) => console.log(data));
+
+var waifu = function() {
+    fetch("https://api.waifu.pics/sfw/kill")
+    .then(response => response.json())
+    .then(data => console.log(data.url));
+
+    return
+}
+console.log(waifu());
+
+waifu();
+
+let select = document.getElementById('subclassSelect');
 
 // Storing past levels and class in localStorage
 const selectedClass = document.getElementById('classSelect');
@@ -76,8 +112,13 @@ var splashTextArray = [
 ]
 
 
+$(document).ready (function() {
+fetch(pmAPI)
+ .then(response => response.json())
+ .then(data => display(data));})
 
 // $(document).ready (function() {
 // fetch(pmAPI)
 //  .then(response => response.json())
 //  .then(data => display(data));})
+
