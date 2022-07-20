@@ -1,8 +1,6 @@
-// const apiUrl = "https://www.dnd5eapi.co/api/"
+var waifuAPI = ("https://api.waifu.pics/sfw/shinobu")
 
-// var pmAPI = ("https://app.pixelencounter.com/api/basic/monsters/random/png?size=100")
 
-// DROWNDOWN CONTROL 
 $(document).ready(function(){
     $('.dropdown-trigger').dropdown({
         coverTrigger: false
@@ -43,6 +41,18 @@ logSelectedLevel();
 
 
 
+
+// const p = document.getElementById("waifu")
+// fetch("https://api.waifu.pics/sfw/shinobu")
+//     .then((response) => {
+//         return response.json();
+//     })
+//     .then((data) => {
+//         console.log(data)
+//         display.HTMLImageElement.crossOrigin
+
+
+let select = document.getElementById('subclassSelect');
 
 // Storing past levels and class in localStorage
 const selectedClass = document.getElementById('classSelect');
@@ -94,6 +104,7 @@ var splashTextArray = [
     "Whats the difference between a wizard and a sorcerer? Class.",
     "Yo momma so dumb she starved and Illithid"
 ]
+
 
 // $(document).ready (function() {
 // fetch(pmAPI)
@@ -166,5 +177,3 @@ var spellList = function() {
             )
     }
     };
-
-// hey a comment about
