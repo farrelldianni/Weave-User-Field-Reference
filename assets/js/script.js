@@ -1,4 +1,5 @@
-// const apiUrl = "https://www.dnd5eapi.co/api/"
+var waifuAPI = ("https://api.waifu.pics/sfw/shinobu")
+
 
 $(document).ready(function(){
     $('.dropdown-trigger').dropdown({
@@ -158,18 +159,3 @@ var spellList = function() {
             )
     }
     };
-
-	var pmAPI = function() {
-		fetch("https://api.open5e.com/monsters/?format=api")
-		.then(function(response) {
-			if(response.ok) {
-                response.json().then(function(data) {
-                    console.log(data);
-					})
-				}}
-				)
-		};
-
-		$("#goBtn").click(function() {
-			pmAPI();
-		});
