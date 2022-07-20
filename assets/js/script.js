@@ -28,9 +28,10 @@ $(document).ready(function(){
      fetch(apiUrl)
          .then(function(response) {
             if (response.ok) {
+                console.log(response);
                 response.json().then(function(data) {
                      console.log(data);
-
+					 return document.getElementById('spells').innerHTML = data
                 })
              }}
         )
@@ -47,7 +48,6 @@ $(document).ready(function(){
 
 // GRABBING SELECTED CLASS FROM classSelect
 var classSelect = document.querySelector('#classSelect');
-logSelectedClass = logSelectedClass.trim();
 
 var logSelectedClass = function() {
     console.log(classSelect.options[classSelect.selectedIndex].id);
