@@ -1,5 +1,5 @@
-var pmAPI = ("https://app.pixelencounter.com/api/basic/monsters/random/png?size=100")
 var waifuAPI = ("https://api.waifu.pics/sfw/shinobu")
+
 
 $(document).ready(function(){
     $('.dropdown-trigger').dropdown({
@@ -11,22 +11,35 @@ $(document).ready(function(){
     $('select').formSelect();
 });
 
-// API TESTING 
-var apiQuery = function(){
-    fetch(apiUrl)
-    .then(response => response.json())
-    .then(data => console.log(data));
-}
 
+// GRABBING SELECTED CLASS FROM classSelect
 //GETTING SELECTION INFORMATION
+var classSelect = document.querySelector('#classSelect');
 
-var whichClass = function(){
-    var fuckingClass = $("#classSelect option:selected").text();
-    return fuckingClass 
-    
+var logSelectedClass = function() {
+    console.log(classSelect.options[classSelect.selectedIndex].id);
+    logSelectedClass = logSelectedClass;
+    return logSelectedClass;
+};
+
+classSelect.addEventListener('change', logSelectedClass);
+logSelectedClass();
+
+
+// GRABBING SELECTED LVL FROM levelSelect
+var levelSelect = document.querySelector("#levelSelect");
+
+var logSelectedLevel = function() {
+    console.log(levelSelect.options[levelSelect.selectedIndex].id);
+    return logSelectedLevel
 }
 
-console.log(whichClass())
+levelSelect.addEventListener('change', logSelectedLevel);
+logSelectedLevel();
+
+
+
+
 
 
 // const p = document.getElementById("waifu")
@@ -60,8 +73,15 @@ playerName.addEventListener('change', (event) => {
     localStorage.setItem("playerName", currentArea);
 })
 
-apiQuery();
 
+//REFILLING DROPDOWNS WITH PREVIOUS INPUTS
+
+
+//getItem(playerName)
+//getItem(level)
+//getItem(class)
+
+var playerNameData = localStorage.getItem('playerName');
 
 // When the page is loaded...
 $(document).ready (function() {
@@ -86,7 +106,82 @@ var splashTextArray = [
 ]
 
 
+// $(document).ready (function() {
+// fetch(pmAPI)
+//  .then(response => response.json())
+//  .then(data => display(data));})
+
+$("#goBtn").click(function() {
+    spellList();
+});
+
+var spellList = function() {
+    if (classSelect.options[classSelect.selectedIndex].id === "warlock") {
+        fetch("https://www.dnd5eapi.co/api/classes/warlock/spells") 
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    console.log(data);
+                })
+            }}
+            )
+        }
+    if (classSelect.options[classSelect.selectedIndex].id === "druid") {
+        fetch("https://www.dnd5eapi.co/api/classes/druid/spells") 
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    console.log(data);
+                })
+            }}
+            )
+    }
+    if (classSelect.options[classSelect.selectedIndex].id === "bard") {
+        fetch("https://www.dnd5eapi.co/api/classes/bard/spells") 
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    console.log(data);
+                })
+            }}
+            )
+    }
+    if (classSelect.options[classSelect.selectedIndex].id === "paladin") {
+        fetch("https://www.dnd5eapi.co/api/classes/paladin/spells") 
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    console.log(data);
+                })
+            }}
+            )
+    }
+    if (classSelect.options[classSelect.selectedIndex].id === "ranger") {
+        fetch("https://www.dnd5eapi.co/api/classes/ranger/spells") 
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    console.log(data);
+                })
+            }}
+            )
+    }
+    if (classSelect.options[classSelect.selectedIndex].id === "sorcerer") {
+        fetch("https://www.dnd5eapi.co/api/classes/sorcerer/spells") 
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    console.log(data);
+                })
+            }}
+            )
+    }
+    };
+
+
+
 $(document).ready (function() {
 fetch(pmAPI)
  .then(response => response.json())
  .then(data => display(data));})
+
