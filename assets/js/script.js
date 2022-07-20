@@ -13,13 +13,8 @@ $(document).ready(function(){
     $('select').formSelect();
 });
 
-// API TESTING 
-// var apiQuery = function(){
-//     fetch("https://www.dnd5eapi.co/api/" + whichClass + "/")
-//     .then(response => response.json())
-//     .then(data => console.log(data));
-// }
 
+// GRABBING SELECTED CLASS FROM classSelect
 //GETTING SELECTION INFORMATION
 var classSelect = document.querySelector('#classSelect');
 
@@ -33,27 +28,6 @@ classSelect.addEventListener('change', logSelectedClass);
 logSelectedClass();
 
 
-// SEARCHING API FOR SPELLS RELATED TO SELECTED CLASS 
-  var getSpells = function(userClass) {
-     var apiUrl = "https://www.dnd5eapi.co/api/classes/" + logSelectedClass + "/spells";
-
-     fetch(apiUrl)
-         .then(function(response) {
-            if (response.ok) {
-                console.log(response);
-                response.json().then(function(data) {
-                     console.log(data);
-                })
-             }}
-        )
-     }
-
-
-
-
-// GRABBING SELECTED CLASS FROM classSelect
-
-
 // GRABBING SELECTED LVL FROM levelSelect
 var levelSelect = document.querySelector("#levelSelect");
 
@@ -65,7 +39,7 @@ var logSelectedLevel = function() {
 levelSelect.addEventListener('change', logSelectedLevel);
 logSelectedLevel();
 
-getSpells();
+
 
 
 
@@ -92,15 +66,12 @@ playerName.addEventListener('change', (event) => {
 
 //REFILLING DROPDOWNS WITH PREVIOUS INPUTS
 
+
 //getItem(playerName)
 //getItem(level)
 //getItem(class)
 
 var playerNameData = localStorage.getItem('playerName');
-
-
-// apiQuery();
-
 
 // When the page is loaded...
 $(document).ready (function() {
@@ -128,3 +99,71 @@ var splashTextArray = [
 // fetch(pmAPI)
 //  .then(response => response.json())
 //  .then(data => display(data));})
+
+$("#goBtn").click(function() {
+    spellList();
+});
+
+var spellList = function() {
+    if (classSelect.options[classSelect.selectedIndex].id === "warlock") {
+        fetch("https://www.dnd5eapi.co/api/classes/warlock/spells") 
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    console.log(data);
+                })
+            }}
+            )
+        }
+    if (classSelect.options[classSelect.selectedIndex].id === "druid") {
+        fetch("https://www.dnd5eapi.co/api/classes/druid/spells") 
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    console.log(data);
+                })
+            }}
+            )
+    }
+    if (classSelect.options[classSelect.selectedIndex].id === "bard") {
+        fetch("https://www.dnd5eapi.co/api/classes/bard/spells") 
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    console.log(data);
+                })
+            }}
+            )
+    }
+    if (classSelect.options[classSelect.selectedIndex].id === "paladin") {
+        fetch("https://www.dnd5eapi.co/api/classes/paladin/spells") 
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    console.log(data);
+                })
+            }}
+            )
+    }
+    if (classSelect.options[classSelect.selectedIndex].id === "ranger") {
+        fetch("https://www.dnd5eapi.co/api/classes/ranger/spells") 
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    console.log(data);
+                })
+            }}
+            )
+    }
+    if (classSelect.options[classSelect.selectedIndex].id === "sorcerer") {
+        fetch("https://www.dnd5eapi.co/api/classes/sorcerer/spells") 
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    console.log(data);
+                })
+            }}
+            )
+    }
+    };
+
