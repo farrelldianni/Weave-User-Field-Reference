@@ -177,11 +177,3 @@ var spellList = function() {
             )
     }
     };
-
-
-
-$(document).ready (function() {
-fetch(pmAPI)
- .then(response => response.json())
- .then(data => display(data));})
-
