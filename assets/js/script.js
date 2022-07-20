@@ -174,11 +174,13 @@ $("#goBtn").click(function() {
     spellList();
 });
 
-var spellList = function() {
-    if (classSelect.options[classSelect.selectedIndex].id === "warlock") {
-        fetch("https://www.dnd5eapi.co/api/classes/warlock/spells")
-            .then(function(response) {
-            if(response.ok)
-            }
-    }
-}
+// var spellList = function() {
+//     if (classSelect.options[classSelect.selectedIndex].id === "warlock") {
+//         fetch("https://www.dnd5eapi.co/api/classes/warlock/spells")
+//             .then(function(response) {
+//             if(response.ok) {
+//                 response.json().then(function(data)) {
+//                     console.log(data);
+//                 })
+//             }}
+            
