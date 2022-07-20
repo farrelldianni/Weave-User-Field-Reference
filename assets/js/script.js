@@ -28,22 +28,26 @@ $(document).ready(function(){
      fetch(apiUrl)
          .then(function(response) {
             if (response.ok) {
-                console.log(response);
                 response.json().then(function(data) {
                      console.log(data);
+
                 })
              }}
         )
      }
 
-
-
+ $("#goBtn").click(function(){
+		getSpells();
+		$("#spells").textContent = $(this)[0].textContent;
+	})
+	
 
 
 
 
 // GRABBING SELECTED CLASS FROM classSelect
 var classSelect = document.querySelector('#classSelect');
+logSelectedClass = logSelectedClass.trim();
 
 var logSelectedClass = function() {
     console.log(classSelect.options[classSelect.selectedIndex].id);
