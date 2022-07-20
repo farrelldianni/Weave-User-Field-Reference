@@ -21,7 +21,16 @@ $(document).ready(function(){
 // }
 
 //GETTING SELECTION INFORMATION
+var classSelect = document.querySelector('#classSelect');
 
+var logSelectedClass = function() {
+    console.log(classSelect.options[classSelect.selectedIndex].id);
+    logSelectedClass = logSelectedClass;
+    return logSelectedClass;
+};
+
+classSelect.addEventListener('change', logSelectedClass);
+logSelectedClass();
 
 
 // SEARCHING API FOR SPELLS RELATED TO SELECTED CLASS 
@@ -42,19 +51,8 @@ $(document).ready(function(){
 
 
 
-
-
-
 // GRABBING SELECTED CLASS FROM classSelect
-var classSelect = document.querySelector('#classSelect');
 
-var logSelectedClass = function() {
-    console.log(classSelect.options[classSelect.selectedIndex].id);
-    return logSelectedClass;
-};
-
-classSelect.addEventListener('change', logSelectedClass);
-logSelectedClass();
 
 // GRABBING SELECTED LVL FROM levelSelect
 var levelSelect = document.querySelector("#levelSelect");
@@ -67,7 +65,7 @@ var logSelectedLevel = function() {
 levelSelect.addEventListener('change', logSelectedLevel);
 logSelectedLevel();
 
-
+getSpells();
 
 
 
@@ -93,9 +91,12 @@ playerName.addEventListener('change', (event) => {
 
 
 //REFILLING DROPDOWNS WITH PREVIOUS INPUTS
-written for push
 
+//getItem(playerName)
+//getItem(level)
+//getItem(class)
 
+var playerNameData = localStorage.getItem('playerName');
 
 
 // apiQuery();
@@ -122,8 +123,6 @@ var splashTextArray = [
     "Whats the difference between a wizard and a sorcerer? Class.",
     "Yo momma so dumb she starved and Illithid"
 ]
-
-
 
 // $(document).ready (function() {
 // fetch(pmAPI)
