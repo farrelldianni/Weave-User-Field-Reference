@@ -93,7 +93,7 @@ playerName.addEventListener('change', (event) => {
 
 
 //REFILLING DROPDOWNS WITH PREVIOUS INPUTS
-written for push
+// written for push
 
 
 
@@ -129,3 +129,81 @@ var splashTextArray = [
 // fetch(pmAPI)
 //  .then(response => response.json())
 //  .then(data => display(data));})
+
+$("#goBtn").click(function() {
+    spellList();
+});
+
+var spellList = function() {
+    if (classSelect.options[classSelect.selectedIndex].id === "warlock") {
+        fetch("https://www.dnd5eapi.co/api/classes/warlock/spells") 
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    console.log(data);
+                })
+            }}
+            )
+        }
+    if (classSelect.options[classSelect.selectedIndex].id === "druid") {
+        fetch("https://www.dnd5eapi.co/api/classes/druid/spells") 
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    console.log(data);
+                })
+            }}
+            )
+    }
+    if (classSelect.options[classSelect.selectedIndex].id === "bard") {
+        fetch("https://www.dnd5eapi.co/api/classes/bard/spells") 
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    console.log(data);
+                })
+            }}
+            )
+    }
+    if (classSelect.options[classSelect.selectedIndex].id === "paladin") {
+        fetch("https://www.dnd5eapi.co/api/classes/paladin/spells") 
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    console.log(data);
+                })
+            }}
+            )
+    }
+    if (classSelect.options[classSelect.selectedIndex].id === "ranger") {
+        fetch("https://www.dnd5eapi.co/api/classes/ranger/spells") 
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    console.log(data);
+                })
+            }}
+            )
+    }
+    if (classSelect.options[classSelect.selectedIndex].id === "sorcerer") {
+        fetch("https://www.dnd5eapi.co/api/classes/sorcerer/spells") 
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    console.log(data);
+                })
+            }}
+            )
+    }
+    };
+
+
+// fetch(apiUrl)
+//          .then(function(response) {
+//             if (response.ok) {
+//                 console.log(response);
+//                 response.json().then(function(data) {
+//                      console.log(data);
+//                 })
+//              }}
+//         )
