@@ -159,3 +159,17 @@ var spellList = function() {
     }
     };
 
+	var pmAPI = function() {
+		fetch("https://api.open5e.com/monsters/?format=api")
+		.then(function(response) {
+			if(response.ok) {
+                response.json().then(function(data) {
+                    console.log(data);
+					})
+				}}
+				)
+		};
+
+		$("#goBtn").click(function() {
+			pmAPI();
+		});
