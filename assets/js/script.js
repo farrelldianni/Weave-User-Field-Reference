@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 // const apiUrl = "https://www.dnd5eapi.co/api/"
 
+=======
+>>>>>>> 406224375afc45047ee1c2bc1f09dfc8bba05f13
 var waifuAPI = ("https://api.waifu.pics/sfw/shinobu")
+
 
 $(document).ready(function(){
     $('.dropdown-trigger').dropdown({
@@ -12,6 +16,7 @@ $(document).ready(function(){
     $('select').formSelect();
 });
 
+<<<<<<< HEAD
 // API TESTING 
 // var apiQuery = function(){
 //     fetch("https://www.dnd5eapi.co/api/" + whichClass + "/")
@@ -44,17 +49,22 @@ $(document).ready(function(){
 
 
 
+=======
+>>>>>>> 406224375afc45047ee1c2bc1f09dfc8bba05f13
 
 // GRABBING SELECTED CLASS FROM classSelect
+//GETTING SELECTION INFORMATION
 var classSelect = document.querySelector('#classSelect');
 
 var logSelectedClass = function() {
     console.log(classSelect.options[classSelect.selectedIndex].id);
+    logSelectedClass = logSelectedClass;
     return logSelectedClass;
 };
 
 classSelect.addEventListener('change', logSelectedClass);
 logSelectedClass();
+
 
 // GRABBING SELECTED LVL FROM levelSelect
 var levelSelect = document.querySelector("#levelSelect");
@@ -66,44 +76,6 @@ var logSelectedLevel = function() {
 
 levelSelect.addEventListener('change', logSelectedLevel);
 logSelectedLevel();
-
-
-
-
-
-
-// const p = document.getElementById("waifu")
-// fetch("https://api.waifu.pics/sfw/shinobu")
-//     .then((response) => {
-//         return response.json();
-//     })
-//     .then((data) => {
-//         console.log(data)
-//     });
-
-function randomPic() {
-    $("#waifu").attr("src", "waifu()")
-    // console.log("hi")
-};
-
-$(document).ready(randomPic());
-
-// fetch("https://api.waifu.pics/sfw/shinobu")
-//     .then(response => response.json())
-//     .then((data) => console.log(data));
-
-var waifu = function() {
-    fetch("https://api.waifu.pics/sfw/kill")
-    .then(response => response.json())
-    .then(data => console.log(data.url));
-
-    return
-}
-console.log(waifu());
-
-waifu();
-
-let select = document.getElementById('subclassSelect');
 
 // Storing past levels and class in localStorage
 const selectedClass = document.getElementById('classSelect');
@@ -126,16 +98,21 @@ playerName.addEventListener('change', (event) => {
 
 
 //REFILLING DROPDOWNS WITH PREVIOUS INPUTS
+<<<<<<< HEAD
 
 //getItem(playerName)
 //getItem(level)
 //getItem(class)
 
+=======
+>>>>>>> 406224375afc45047ee1c2bc1f09dfc8bba05f13
 
 
+//getItem(playerName)
+//getItem(level)
+//getItem(class)
 
-// apiQuery();
-
+var playerNameData = localStorage.getItem('playerName');
 
 // When the page is loaded...
 $(document).ready (function() {
@@ -156,14 +133,8 @@ var splashTextArray = [
     "You want to use a 9th level slot on Hellish Rebuke? You sure?",
     "I'm sure that hooded figure you met in the tavern is a lovely person and definitely not some sort of evil lich! Go befriend them!",
     "Whats the difference between a wizard and a sorcerer? Class.",
-    "Yo momma so dumb she starved and Illithid"
+    "Yo momma so dumb she starved an Illithid"
 ]
-
-
-$(document).ready (function() {
-fetch(pmAPI)
- .then(response => response.json())
- .then(data => display(data));})
 
 // $(document).ready (function() {
 // fetch(pmAPI)
@@ -176,7 +147,44 @@ $("#goBtn").click(function() {
 
 var spellList = function() {
     if (classSelect.options[classSelect.selectedIndex].id === "warlock") {
-        fetch("https://www.dnd5eapi.co/api/classes/warlock/spells") 
+        if (levelSelect.options[levelSelect.selectedIndex].id === "1")
+        fetch("https://www.dnd5eapi.co/api/classes/warlock/levels/1/spells")
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    console.log(data);
+                })
+            }}
+            )
+            if (levelSelect.options[levelSelect.selectedIndex].id === "2")
+            fetch("https://www.dnd5eapi.co/api/classes/warlock/levels/2/spells") 
+                .then(function(response) {
+                if(response.ok) {
+                    response.json().then(function(data) {
+                        console.log(data);
+                    })
+                }}
+                )
+    if (levelSelect.options[levelSelect.selectedIndex].id === "3")
+        fetch("https://www.dnd5eapi.co/api/classes/warlock/levels/3/spells") 
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    console.log(data);
+                })
+            }}
+            )
+            if (levelSelect.options[levelSelect.selectedIndex].id === "4")
+        fetch("https://www.dnd5eapi.co/api/classes/warlock/levels/4/spells") 
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    console.log(data);
+                })
+            }}
+            )
+            if (levelSelect.options[levelSelect.selectedIndex].id === "5")
+        fetch("https://www.dnd5eapi.co/api/classes/warlock/levels/5/spells") 
             .then(function(response) {
             if(response.ok) {
                 response.json().then(function(data) {
@@ -186,7 +194,44 @@ var spellList = function() {
             )
         }
     if (classSelect.options[classSelect.selectedIndex].id === "druid") {
-        fetch("https://www.dnd5eapi.co/api/classes/druid/spells") 
+        if (levelSelect.options[levelSelect.selectedIndex].id === "1")
+        fetch("https://www.dnd5eapi.co/api/classes/druid/levels/1/spells")
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    console.log(data);
+                })
+            }}
+            )
+            if (levelSelect.options[levelSelect.selectedIndex].id === "2")
+            fetch("https://www.dnd5eapi.co/api/classes/druid/levels/2/spells") 
+                .then(function(response) {
+                if(response.ok) {
+                    response.json().then(function(data) {
+                        console.log(data);
+                    })
+                }}
+                )
+    if (levelSelect.options[levelSelect.selectedIndex].id === "3")
+        fetch("https://www.dnd5eapi.co/api/classes/druid/levels/3/spells") 
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    console.log(data);
+                })
+            }}
+            )
+            if (levelSelect.options[levelSelect.selectedIndex].id === "4")
+        fetch("https://www.dnd5eapi.co/api/classes/druid/levels/4/spells") 
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    console.log(data);
+                })
+            }}
+            )
+            if (levelSelect.options[levelSelect.selectedIndex].id === "5")
+        fetch("https://www.dnd5eapi.co/api/classes/druid/levels/5/spells") 
             .then(function(response) {
             if(response.ok) {
                 response.json().then(function(data) {
@@ -196,7 +241,44 @@ var spellList = function() {
             )
     }
     if (classSelect.options[classSelect.selectedIndex].id === "bard") {
-        fetch("https://www.dnd5eapi.co/api/classes/bard/spells") 
+        if (levelSelect.options[levelSelect.selectedIndex].id === "1")
+        fetch("https://www.dnd5eapi.co/api/classes/bard/levels/1/spells")    
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    console.log(data);
+                })
+            }}
+            )
+            if (levelSelect.options[levelSelect.selectedIndex].id === "2")
+            fetch("https://www.dnd5eapi.co/api/classes/bard/levels/2/spells") 
+                .then(function(response) {
+                if(response.ok) {
+                    response.json().then(function(data) {
+                        console.log(data);
+                    })
+                }}
+                )
+    if (levelSelect.options[levelSelect.selectedIndex].id === "3")
+        fetch("https://www.dnd5eapi.co/api/classes/bard/levels/3/spells") 
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    console.log(data);
+                })
+            }}
+            )
+            if (levelSelect.options[levelSelect.selectedIndex].id === "4")
+        fetch("https://www.dnd5eapi.co/api/classes/bard/levels/4/spells") 
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    console.log(data);
+                })
+            }}
+            )
+            if (levelSelect.options[levelSelect.selectedIndex].id === "5")
+        fetch("https://www.dnd5eapi.co/api/classes/bard/levels/5/spells") 
             .then(function(response) {
             if(response.ok) {
                 response.json().then(function(data) {
@@ -206,7 +288,44 @@ var spellList = function() {
             )
     }
     if (classSelect.options[classSelect.selectedIndex].id === "paladin") {
-        fetch("https://www.dnd5eapi.co/api/classes/paladin/spells") 
+        if (levelSelect.options[levelSelect.selectedIndex].id === "1")
+        fetch("https://www.dnd5eapi.co/api/classes/paladin/levels/1/spells")
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    console.log(data);
+                })
+            }}
+            )
+            if (levelSelect.options[levelSelect.selectedIndex].id === "2")
+            fetch("https://www.dnd5eapi.co/api/classes/paladin/levels/2/spells") 
+                .then(function(response) {
+                if(response.ok) {
+                    response.json().then(function(data) {
+                        console.log(data);
+                    })
+                }}
+                )
+    if (levelSelect.options[levelSelect.selectedIndex].id === "3")
+        fetch("https://www.dnd5eapi.co/api/classes/paladin/levels/3/spells") 
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    console.log(data);
+                })
+            }}
+            )
+            if (levelSelect.options[levelSelect.selectedIndex].id === "4")
+        fetch("https://www.dnd5eapi.co/api/classes/paladin/levels/4/spells") 
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    console.log(data);
+                })
+            }}
+            )
+            if (levelSelect.options[levelSelect.selectedIndex].id === "5")
+        fetch("https://www.dnd5eapi.co/api/classes/paladin/levels/5/spells") 
             .then(function(response) {
             if(response.ok) {
                 response.json().then(function(data) {
@@ -216,7 +335,44 @@ var spellList = function() {
             )
     }
     if (classSelect.options[classSelect.selectedIndex].id === "ranger") {
-        fetch("https://www.dnd5eapi.co/api/classes/ranger/spells") 
+        if (levelSelect.options[levelSelect.selectedIndex].id === "1")
+        fetch("https://www.dnd5eapi.co/api/classes/ranger/levels/1/spells")
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    console.log(data);
+                })
+            }}
+            )
+            if (levelSelect.options[levelSelect.selectedIndex].id === "2")
+            fetch("https://www.dnd5eapi.co/api/classes/ranger/levels/2/spells") 
+                .then(function(response) {
+                if(response.ok) {
+                    response.json().then(function(data) {
+                        console.log(data);
+                    })
+                }}
+                )
+    if (levelSelect.options[levelSelect.selectedIndex].id === "3")
+        fetch("https://www.dnd5eapi.co/api/classes/ranger/levels/3/spells") 
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    console.log(data);
+                })
+            }}
+            )
+            if (levelSelect.options[levelSelect.selectedIndex].id === "4")
+        fetch("https://www.dnd5eapi.co/api/classes/ranger/levels/4/spells") 
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    console.log(data);
+                })
+            }}
+            )
+            if (levelSelect.options[levelSelect.selectedIndex].id === "5")
+        fetch("https://www.dnd5eapi.co/api/classes/ranger/levels/5/spells") 
             .then(function(response) {
             if(response.ok) {
                 response.json().then(function(data) {
@@ -226,7 +382,44 @@ var spellList = function() {
             )
     }
     if (classSelect.options[classSelect.selectedIndex].id === "sorcerer") {
-        fetch("https://www.dnd5eapi.co/api/classes/sorcerer/spells") 
+       if (levelSelect.options[levelSelect.selectedIndex].id === "1")
+        fetch("https://www.dnd5eapi.co/api/classes/sorcerer/levels/1/spells") 
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    console.log(data);
+                })
+            }}
+            )
+            if (levelSelect.options[levelSelect.selectedIndex].id === "2")
+            fetch("https://www.dnd5eapi.co/api/classes/sorcerer/levels/2/spells") 
+                .then(function(response) {
+                if(response.ok) {
+                    response.json().then(function(data) {
+                        console.log(data);
+                    })
+                }}
+                )
+    if (levelSelect.options[levelSelect.selectedIndex].id === "3")
+        fetch("https://www.dnd5eapi.co/api/classes/sorcerer/levels/3/spells") 
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    console.log(data);
+                })
+            }}
+            )
+            if (levelSelect.options[levelSelect.selectedIndex].id === "4")
+        fetch("https://www.dnd5eapi.co/api/classes/sorcerer/levels/4/spells") 
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    console.log(data);
+                })
+            }}
+            )
+            if (levelSelect.options[levelSelect.selectedIndex].id === "5")
+        fetch("https://www.dnd5eapi.co/api/classes/sorcerer/levels/5/spells") 
             .then(function(response) {
             if(response.ok) {
                 response.json().then(function(data) {
@@ -235,6 +428,7 @@ var spellList = function() {
             }}
             )
     }
+<<<<<<< HEAD
     };
 
 spellList();
@@ -248,3 +442,55 @@ spellList();
 //                 })
 //              }}
 //         )
+=======
+    if (classSelect.options[classSelect.selectedIndex].id === "wizard") {
+        if (levelSelect.options[levelSelect.selectedIndex].id === "1")
+        fetch("https://www.dnd5eapi.co/api/classes/wizard/levels/1/spells")
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    console.log(data);
+                })
+            }}
+            )
+            if (levelSelect.options[levelSelect.selectedIndex].id === "2")
+            fetch("https://www.dnd5eapi.co/api/classes/wizard/levels/2/spells") 
+                .then(function(response) {
+                if(response.ok) {
+                    response.json().then(function(data) {
+                        console.log(data);
+                    })
+                }}
+                )
+    if (levelSelect.options[levelSelect.selectedIndex].id === "3")
+        fetch("https://www.dnd5eapi.co/api/classes/wizard/levels/3/spells") 
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    console.log(data);
+                })
+            }}
+            )
+            if (levelSelect.options[levelSelect.selectedIndex].id === "4")
+        fetch("https://www.dnd5eapi.co/api/classes/wizard/levels/4/spells") 
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    console.log(data);
+                })
+            }}
+            )
+            if (levelSelect.options[levelSelect.selectedIndex].id === "5")
+        fetch("https://www.dnd5eapi.co/api/classes/wizard/levels/5/spells") 
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    console.log(data);
+                })
+            }}
+            )
+        }
+};
+
+//spell level addition
+>>>>>>> 406224375afc45047ee1c2bc1f09dfc8bba05f13
