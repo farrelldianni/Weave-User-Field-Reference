@@ -1,9 +1,13 @@
-<<<<<<< HEAD
 // const apiUrl = "https://www.dnd5eapi.co/api/"
 
-=======
->>>>>>> 406224375afc45047ee1c2bc1f09dfc8bba05f13
 var waifuAPI = ("https://api.waifu.pics/sfw/shinobu")
+var request = new XMLHttpRequest()
+
+// function getData() {
+//     const response = await fetch("https://api.waifu.pics/sfw/shinobu")
+//     const data = await response.json()
+// }
+
 
 
 $(document).ready(function(){
@@ -16,7 +20,6 @@ $(document).ready(function(){
     $('select').formSelect();
 });
 
-<<<<<<< HEAD
 // API TESTING 
 // var apiQuery = function(){
 //     fetch("https://www.dnd5eapi.co/api/" + whichClass + "/")
@@ -49,22 +52,17 @@ $(document).ready(function(){
 
 
 
-=======
->>>>>>> 406224375afc45047ee1c2bc1f09dfc8bba05f13
 
 // GRABBING SELECTED CLASS FROM classSelect
-//GETTING SELECTION INFORMATION
 var classSelect = document.querySelector('#classSelect');
 
 var logSelectedClass = function() {
     console.log(classSelect.options[classSelect.selectedIndex].id);
-    logSelectedClass = logSelectedClass;
     return logSelectedClass;
 };
 
 classSelect.addEventListener('change', logSelectedClass);
 logSelectedClass();
-
 
 // GRABBING SELECTED LVL FROM levelSelect
 var levelSelect = document.querySelector("#levelSelect");
@@ -76,6 +74,47 @@ var logSelectedLevel = function() {
 
 levelSelect.addEventListener('change', logSelectedLevel);
 logSelectedLevel();
+
+
+
+
+
+
+// const p = document.getElementById("waifu")
+// fetch("https://api.waifu.pics/sfw/shinobu")
+//     .then((response) => {
+//         return response.json();
+//     })
+//     .then((data) => {
+//         console.log(data)
+//     });
+
+function randomPic() {
+    $("#waifu").attr("src", "waifu()")
+    // console.log("hi")
+};
+
+
+
+$(document).ready(randomPic());
+
+// fetch("https://api.waifu.pics/sfw/shinobu")
+//     .then(response => response.json())
+//     .then((data) => console.log(data));
+
+var waifu = function() {
+    fetch("https://api.waifu.pics/sfw/kill")
+    .then(response => response.json())
+    .then(data => {
+        console.log(data.url)
+        var img = document.createElement('img')
+        img.setAttribute('src', data.url)
+        document.getElementById('image').append(img)
+    });
+}
+
+waifu();
+
 
 // Storing past levels and class in localStorage
 const selectedClass = document.getElementById('classSelect');
@@ -98,21 +137,16 @@ playerName.addEventListener('change', (event) => {
 
 
 //REFILLING DROPDOWNS WITH PREVIOUS INPUTS
-<<<<<<< HEAD
 
 //getItem(playerName)
 //getItem(level)
 //getItem(class)
 
-=======
->>>>>>> 406224375afc45047ee1c2bc1f09dfc8bba05f13
 
 
-//getItem(playerName)
-//getItem(level)
-//getItem(class)
 
-var playerNameData = localStorage.getItem('playerName');
+// apiQuery();
+
 
 // When the page is loaded...
 $(document).ready (function() {
@@ -133,17 +167,33 @@ var splashTextArray = [
     "You want to use a 9th level slot on Hellish Rebuke? You sure?",
     "I'm sure that hooded figure you met in the tavern is a lovely person and definitely not some sort of evil lich! Go befriend them!",
     "Whats the difference between a wizard and a sorcerer? Class.",
-    "Yo momma so dumb she starved an Illithid"
+    "Yo momma so dumb she starved and Illithid"
 ]
+
+
+$(document).ready (function() {
+fetch(pmAPI)
+ .then(response => response.json())
+ .then(data => display(data));})
 
 // $(document).ready (function() {
 // fetch(pmAPI)
 //  .then(response => response.json())
 //  .then(data => display(data));})
 
+
 $("#goBtn").click(function() {
     spellList();
 });
+
+function spellChoices(data) {
+    for (var i = 0; i < data.results.length; i++) {
+        console.log(data.results[i].name)
+        var p = document.createElement('p')
+        p.textContent = data.results[i].name
+        document.getElementById('waifu').append(p)
+    }
+}
 
 var spellList = function() {
     if (classSelect.options[classSelect.selectedIndex].id === "warlock") {
@@ -152,7 +202,7 @@ var spellList = function() {
             .then(function(response) {
             if(response.ok) {
                 response.json().then(function(data) {
-                    console.log(data);
+                    spellChoices(data)
                 })
             }}
             )
@@ -161,7 +211,7 @@ var spellList = function() {
                 .then(function(response) {
                 if(response.ok) {
                     response.json().then(function(data) {
-                        console.log(data);
+                        spellChoices(data)
                     })
                 }}
                 )
@@ -170,7 +220,7 @@ var spellList = function() {
             .then(function(response) {
             if(response.ok) {
                 response.json().then(function(data) {
-                    console.log(data);
+                    cspellChoices(data);
                 })
             }}
             )
@@ -179,7 +229,7 @@ var spellList = function() {
             .then(function(response) {
             if(response.ok) {
                 response.json().then(function(data) {
-                    console.log(data);
+                    spellChoices(data);
                 })
             }}
             )
@@ -188,7 +238,7 @@ var spellList = function() {
             .then(function(response) {
             if(response.ok) {
                 response.json().then(function(data) {
-                    console.log(data);
+                    spellChoices(data);
                 })
             }}
             )
@@ -199,7 +249,7 @@ var spellList = function() {
             .then(function(response) {
             if(response.ok) {
                 response.json().then(function(data) {
-                    console.log(data);
+                    spellChoices(data);
                 })
             }}
             )
@@ -208,7 +258,7 @@ var spellList = function() {
                 .then(function(response) {
                 if(response.ok) {
                     response.json().then(function(data) {
-                        console.log(data);
+                        spellChoices(data);
                     })
                 }}
                 )
@@ -217,7 +267,7 @@ var spellList = function() {
             .then(function(response) {
             if(response.ok) {
                 response.json().then(function(data) {
-                    console.log(data);
+                    spellChoices(data);
                 })
             }}
             )
@@ -226,7 +276,7 @@ var spellList = function() {
             .then(function(response) {
             if(response.ok) {
                 response.json().then(function(data) {
-                    console.log(data);
+                    spellChoices(data);
                 })
             }}
             )
@@ -235,7 +285,7 @@ var spellList = function() {
             .then(function(response) {
             if(response.ok) {
                 response.json().then(function(data) {
-                    console.log(data);
+                    spellChoices(data);
                 })
             }}
             )
@@ -246,7 +296,7 @@ var spellList = function() {
             .then(function(response) {
             if(response.ok) {
                 response.json().then(function(data) {
-                    console.log(data);
+                    spellChoices(data);
                 })
             }}
             )
@@ -255,7 +305,7 @@ var spellList = function() {
                 .then(function(response) {
                 if(response.ok) {
                     response.json().then(function(data) {
-                        console.log(data);
+                        spellChoices(data);
                     })
                 }}
                 )
@@ -264,7 +314,7 @@ var spellList = function() {
             .then(function(response) {
             if(response.ok) {
                 response.json().then(function(data) {
-                    console.log(data);
+                    spellChoices(data);
                 })
             }}
             )
@@ -273,7 +323,7 @@ var spellList = function() {
             .then(function(response) {
             if(response.ok) {
                 response.json().then(function(data) {
-                    console.log(data);
+                    spellChoices(data);
                 })
             }}
             )
@@ -282,7 +332,7 @@ var spellList = function() {
             .then(function(response) {
             if(response.ok) {
                 response.json().then(function(data) {
-                    console.log(data);
+                    spellChoices(data);
                 })
             }}
             )
@@ -293,7 +343,7 @@ var spellList = function() {
             .then(function(response) {
             if(response.ok) {
                 response.json().then(function(data) {
-                    console.log(data);
+                    spellChoices(data);
                 })
             }}
             )
@@ -302,7 +352,7 @@ var spellList = function() {
                 .then(function(response) {
                 if(response.ok) {
                     response.json().then(function(data) {
-                        console.log(data);
+                        spellChoices(data);
                     })
                 }}
                 )
@@ -311,7 +361,7 @@ var spellList = function() {
             .then(function(response) {
             if(response.ok) {
                 response.json().then(function(data) {
-                    console.log(data);
+                    spellChoices(data);
                 })
             }}
             )
@@ -320,7 +370,7 @@ var spellList = function() {
             .then(function(response) {
             if(response.ok) {
                 response.json().then(function(data) {
-                    console.log(data);
+                    spellChoices(data);
                 })
             }}
             )
@@ -329,7 +379,7 @@ var spellList = function() {
             .then(function(response) {
             if(response.ok) {
                 response.json().then(function(data) {
-                    console.log(data);
+                    spellChoices(data);
                 })
             }}
             )
@@ -340,7 +390,7 @@ var spellList = function() {
             .then(function(response) {
             if(response.ok) {
                 response.json().then(function(data) {
-                    console.log(data);
+                    spellChoices(data);
                 })
             }}
             )
@@ -349,7 +399,7 @@ var spellList = function() {
                 .then(function(response) {
                 if(response.ok) {
                     response.json().then(function(data) {
-                        console.log(data);
+                        spellChoices(data);
                     })
                 }}
                 )
@@ -358,7 +408,7 @@ var spellList = function() {
             .then(function(response) {
             if(response.ok) {
                 response.json().then(function(data) {
-                    console.log(data);
+                    spellChoices(data);
                 })
             }}
             )
@@ -367,7 +417,7 @@ var spellList = function() {
             .then(function(response) {
             if(response.ok) {
                 response.json().then(function(data) {
-                    console.log(data);
+                    spellChoices(data);
                 })
             }}
             )
@@ -376,7 +426,7 @@ var spellList = function() {
             .then(function(response) {
             if(response.ok) {
                 response.json().then(function(data) {
-                    console.log(data);
+                    spellChoices(data);
                 })
             }}
             )
@@ -387,7 +437,7 @@ var spellList = function() {
             .then(function(response) {
             if(response.ok) {
                 response.json().then(function(data) {
-                    console.log(data);
+                    spellChoices(data);
                 })
             }}
             )
@@ -396,7 +446,7 @@ var spellList = function() {
                 .then(function(response) {
                 if(response.ok) {
                     response.json().then(function(data) {
-                        console.log(data);
+                        spellChoices(data);
                     })
                 }}
                 )
@@ -405,7 +455,7 @@ var spellList = function() {
             .then(function(response) {
             if(response.ok) {
                 response.json().then(function(data) {
-                    console.log(data);
+                    spellChoices(data);
                 })
             }}
             )
@@ -414,7 +464,7 @@ var spellList = function() {
             .then(function(response) {
             if(response.ok) {
                 response.json().then(function(data) {
-                    console.log(data);
+                    spellChoices(data);
                 })
             }}
             )
@@ -423,15 +473,64 @@ var spellList = function() {
             .then(function(response) {
             if(response.ok) {
                 response.json().then(function(data) {
-                    console.log(data);
+                    spellChoices(data);
                 })
             }}
             )
     }
-<<<<<<< HEAD
-    };
+    if (classSelect.options[classSelect.selectedIndex].id === "wizard") {
+        if (levelSelect.options[levelSelect.selectedIndex].id === "1")
+        fetch("https://www.dnd5eapi.co/api/classes/wizard/levels/1/spells")
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    spellChoices(data);
+                })
+            }}
+            )
+            if (levelSelect.options[levelSelect.selectedIndex].id === "2")
+            fetch("https://www.dnd5eapi.co/api/classes/wizard/levels/2/spells") 
+                .then(function(response) {
+                if(response.ok) {
+                    response.json().then(function(data) {
+                        spellChoices(data);
+                    })
+                }}
+                )
+    if (levelSelect.options[levelSelect.selectedIndex].id === "3")
+        fetch("https://www.dnd5eapi.co/api/classes/wizard/levels/3/spells") 
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    spellChoices(data)
+                })
+            }}
+            )
+            if (levelSelect.options[levelSelect.selectedIndex].id === "4")
+        fetch("https://www.dnd5eapi.co/api/classes/wizard/levels/4/spells") 
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    spellChoices(data);
+                })
+            }}
+            )
+            if (levelSelect.options[levelSelect.selectedIndex].id === "5")
+        fetch("https://www.dnd5eapi.co/api/classes/wizard/levels/5/spells") 
+            .then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    spellChoices(data);
+                })
+            }}
+            )
+        }
+};
 
-spellList();
+
+spellList()
+
+
 
 // fetch(apiUrl)
 //          .then(function(response) {
@@ -442,55 +541,3 @@ spellList();
 //                 })
 //              }}
 //         )
-=======
-    if (classSelect.options[classSelect.selectedIndex].id === "wizard") {
-        if (levelSelect.options[levelSelect.selectedIndex].id === "1")
-        fetch("https://www.dnd5eapi.co/api/classes/wizard/levels/1/spells")
-            .then(function(response) {
-            if(response.ok) {
-                response.json().then(function(data) {
-                    console.log(data);
-                })
-            }}
-            )
-            if (levelSelect.options[levelSelect.selectedIndex].id === "2")
-            fetch("https://www.dnd5eapi.co/api/classes/wizard/levels/2/spells") 
-                .then(function(response) {
-                if(response.ok) {
-                    response.json().then(function(data) {
-                        console.log(data);
-                    })
-                }}
-                )
-    if (levelSelect.options[levelSelect.selectedIndex].id === "3")
-        fetch("https://www.dnd5eapi.co/api/classes/wizard/levels/3/spells") 
-            .then(function(response) {
-            if(response.ok) {
-                response.json().then(function(data) {
-                    console.log(data);
-                })
-            }}
-            )
-            if (levelSelect.options[levelSelect.selectedIndex].id === "4")
-        fetch("https://www.dnd5eapi.co/api/classes/wizard/levels/4/spells") 
-            .then(function(response) {
-            if(response.ok) {
-                response.json().then(function(data) {
-                    console.log(data);
-                })
-            }}
-            )
-            if (levelSelect.options[levelSelect.selectedIndex].id === "5")
-        fetch("https://www.dnd5eapi.co/api/classes/wizard/levels/5/spells") 
-            .then(function(response) {
-            if(response.ok) {
-                response.json().then(function(data) {
-                    console.log(data);
-                })
-            }}
-            )
-        }
-};
-
-//spell level addition
->>>>>>> 406224375afc45047ee1c2bc1f09dfc8bba05f13
