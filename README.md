@@ -10,6 +10,9 @@
 
 - This W.U.F.R. allows you to input your name, class, and player level to figure out what spells you can utilize at your current class player level.
 
+## Screenshot of Deployed Website:
+![Screenshot of Website](assets/screenshot/screenshot.png)
+
 ## Link: https://farrelldianni.github.io/Weave-User-Field-Reference/
 
 ### Created By: Farrell Dianni, Madeline Burns, Frank Kobe, and Brian Koo
